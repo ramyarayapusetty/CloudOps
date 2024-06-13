@@ -113,7 +113,11 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   }
 
   tags = {
-    Environment = var.Environment
+    team=var.team
+    environment=var.environment
+    owner=var.owner
+    owner_email=var.owner_email
+    creation_date=timestamp()
   }
 
   viewer_certificate {
