@@ -37,3 +37,20 @@ variable "port" {
     description = "port number which wanted to fetch the DB"
     type = number
 }
+
+variable "team" {
+  description = "Team name"
+  type = string
+}
+variable "environment" {
+  description = "Environment name"
+  type = string
+}
+variable "owner" {
+  description = "Owner name"
+  type = string
+}
+variable "owner_email" {
+  description = "Owner email"
+  type = string
+}
