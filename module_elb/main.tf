@@ -3,12 +3,12 @@ provider "aws" {
 }
 
 resource "aws_vpc" "my_vpc" {
-  cidr_block = "10.0.0.0/16" 
+  cidr_block = var.aws_vpc_cidr_block
 }
 
 resource "aws_subnet" "my_subnet" {
   vpc_id     = aws_vpc.my_vpc.id
-  cidr_block = "10.0.1.0/24" 
+  cidr_block = var.aws_subnet_cider_block
 }
 
 resource "aws_security_group" "my_security_group" {
@@ -18,7 +18,7 @@ resource "aws_security_group" "my_security_group" {
     from_port   = var.from_port
     to_port     = var.to_port
     protocol    = var.protocol
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = var.ingress_cidr_block
   }
 }
 
@@ -29,18 +29,22 @@ resource "aws_lb" "my_lb" {
   subnets            = [aws_subnet.my_subnet.id]
 
   tags = {
-    Name = "My NLB"
+    team=var.team
+    environment=var.environment
+    owner=var.owner
+    owner_email=var.owner_email
+    creation_date=timestamp()
   }
 }
 
 resource "aws_lb_target_group" "my_target_group" {
-  name     = "my-target-group"
+  name     = var.aws_lb_target_group_name
   port     = var.from_port
-  protocol = var.protocol
+  protocol = var.aws_lb_target_group_protocol
   vpc_id   = aws_vpc.my_vpc.id
 
   health_check {
-    protocol = "TCP"
+    protocol = var.protocol
   }
 }
 
@@ -52,3 +56,4 @@ resource "aws_lb_target_group_attachment" "my_target_attachment" {
 output "nlb_dns_name" {
   value = aws_lb.my_lb.dns_name
 }
+
