@@ -9,4 +9,4 @@ port = 6379
 team             = "CloudOps"
 environment      = "Practice"
 owner            = "Ramya Sri Rayapusetty"
-ownerowner_email = "ramyasrirayapusetty@gmail.com"
+owner_email = "ramyasrirayapusetty@gmail.com"
