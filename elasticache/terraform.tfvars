@@ -6,3 +6,7 @@ cache_count  = 1
 parameter_group_name  = "default.redis6.x"
 engine_version = "6.0"
 port = 6379
+team             = "CloudOps"
+environment      = "Practice"
+owner            = "Ramya Sri Rayapusetty"
+ownerowner_email = "ramyasrirayapusetty@gmail.com"
