@@ -1,0 +1,17 @@
+region                       = "us-east-1"
+from_port                    = 80
+to_port                      = 80
+aws_lb_target_group_protocol = "tcp"
+name                         = "my-nlb"
+internal                     = false
+load_balancer_type           = "network"
+target_id                    = "i-0bdf69a0c558061f8"
+aws_vpc_cidr_block           = "10.0.0.0/16"
+aws_subnet_cider_block       = "10.0.1.0/24"
+ingress_cidr_block           = ["0.0.0.0/0"]
+aws_lb_target_group_name     = "my-target-group"
+protocol                     = "TCP"
+team                         = "CloudOps"
+environment                  = "Practice"
+owner                        = "Ramya Sri Rayapusetty"
+owner_email                  = "ramyasrirayapusetty@gmail.com"
