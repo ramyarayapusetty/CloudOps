@@ -1,0 +1,26 @@
+name = "emr-test-arn"
+release_label = "emr-4.6.0"
+applications = [ "Spark" ]
+termination_protection = false
+keep_job_flow_alive_when_no_steps = true
+autoscaling_role = "arn:aws:iam::533267324388:role/EMR_AutoScalingRole"
+subnet_id = "subnet-0fdbd1df03cae8717"
+emr_managed_master_security_group = "sg-0d010d5fb174c6948"
+emr_managed_slave_security_group = "sg-000134d8bfe2419be"
+instance_profile = "arn:aws:iam::533267324388:instance-profile/EC2_InstanceProfile"
+instance_count = 1
+size = "40"
+type = "gp2"
+volumes_per_instance = 1
+bid_price = "0.30"
+ebs_root_volume_size = 100
+service_role = 100
+master_instance_group_instance_type = "m4.large"
+core_instance_group_instance_type = "c4.large"
+team             = "CloudOps"
+environment      = "Practice"
+owner            = "Ramya Sri Rayapusetty"
+owner_email = "ramyasrirayapusetty@gmail.com"
+path = "s3://elasticmapreduce/bootstrap-actions/run-if"
+bootstrap_action_name = "runif"
+args = [ "instance.isMaster=true", "echo running on master node" ]
