@@ -11,4 +11,12 @@ resource "aws_elasticache_cluster" "example" {
   parameter_group_name = var.parameter_group_name
   engine_version       = var.engine_version
   port                 = var.port
+
+  tags={
+      team=var.team
+      environment=var.environment
+      owner=var.owner
+      owner_email=var.owner_email
+      creation_date=timestamp()
+  }
 }
