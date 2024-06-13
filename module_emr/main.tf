@@ -24,11 +24,11 @@ EOF
   }
 
   master_instance_group {
-    instance_type = "m4.large"
+    instance_type = var.master_instance_group_instance_type
   }
 
   core_instance_group {
-    instance_type  = "c4.large"
+    instance_type  = var.core_instance_group_instance_type
     instance_count = var.instance_count
 
     ebs_config {
@@ -78,14 +78,17 @@ EOF
 
 
   tags = {
-    role = "rolename"
-    env  = "env"
+    team=var.team
+    environment=var.environment
+    owner=var.owner
+    owner_email=var.owner_email
+    creation_date=timestamp()
   }
 
   bootstrap_action {
-    path = "s3://elasticmapreduce/bootstrap-actions/run-if"
-    name = "runif"
-    args = ["instance.isMaster=true", "echo running on master node"]
+    path = var.path
+    name = var.bootstrap_action_name
+    args = var.args
   }
 
   configurations_json = <<EOF
