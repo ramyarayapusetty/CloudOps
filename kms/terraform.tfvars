@@ -1,0 +1,5 @@
+name = "alias/my-key-alias"
+team             = "CloudOps"
+environment      = "Practice"
+owner            = "Ramya Sri Rayapusetty"
+owner_email = "ramyasrirayapusetty@gmail.com"
