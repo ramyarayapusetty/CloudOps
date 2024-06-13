@@ -1,5 +1,12 @@
 resource "aws_ecr_repository" "example" {
   name = var.name
+  tags={
+    team=var.team
+    environment=var.environment
+    owner=var.owner
+    owner_email=var.owner_email
+    creation_date=timestamp()
+  }
 }
 
 resource "aws_ecr_lifecycle_policy" "example" {
