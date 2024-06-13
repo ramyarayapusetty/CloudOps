@@ -1,5 +1,20 @@
 variable "name" {
     description = "The name of the key"
     type = string
-    default = "alias/my-key-alias"
+}
+variable "team" {
+  description = "Team name"
+  type = string
+}
+variable "environment" {
+  description = "Environment name"
+  type = string
+}
+variable "owner" {
+  description = "Owner name"
+  type = string
+}
+variable "owner_email" {
+  description = "Owner email"
+  type = string
 }
