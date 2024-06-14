@@ -9,4 +9,12 @@ resource "aws_mwaa_environment" "example" {
   }
 
   source_bucket_arn = var.source_bucket_arn
+
+  tags = {
+    team          = var.team
+    environment   = var.environment
+    owner         = var.owner
+    owner_email   = var.owner_email
+    creation_date = timestamp()
+  }
 }
