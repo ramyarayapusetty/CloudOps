@@ -1,0 +1,12 @@
+db_name              = "mydb"
+engine               = "mysql"
+engine_version       = "8.0"
+instance_class       = "db.t3.micro"
+username             = "db1"
+password             = "password"
+parameter_group_name = "default.mysql8.0"
+allocated_storage    = 10
+team                 = "CloudOps"
+environment          = "Practice"
+owner                = "Ramya Sri Rayapusetty"
+owner_email          = "ramyasrirayapusetty@gmail.com"
