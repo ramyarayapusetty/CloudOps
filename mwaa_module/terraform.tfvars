@@ -1,0 +1,10 @@
+dag_s3_path        = "dags/"
+execution_role_arn = "arn:aws:iam::533267324388:role/test_role"
+name               = "mwaa_environment1"
+security_group_ids = ["sg-0ccfe409ef3c31b7f", "sg-096b1f290b5b5360b"]
+subnet_ids         = ["subnet-0e43872c2b91ab228", "subnet-0f3e36c2eab7fb3ce"]
+source_bucket_arn  = "arn:aws:s3:::aws-logs-533267324388-us-east-1"
+team               = "CloudOps"
+environment        = "Practice"
+owner              = "Ramya Sri Rayapusetty"
+owner_email        = "ramyasrirayapusetty@gmail.com"
