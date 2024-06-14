@@ -12,8 +12,8 @@ Parameters:
 
 Terraform Configuration:
 
-Review Configuration: Review the main.tf file to ensure it matches your requirements. You can adjust variables such as region, accesskey, password etc.
-Initialize Terraform: Navigate to the directory containing the Terraform configuration files and initialize Terraform(terraform init).
-Create Plan: Generate a Terraform execution plan to preview the changes Terraform will make to your infrastructure(terraform plan).
-Apply Plan: If the plan looks good, apply it to provision or update your ECR resources(terraform apply).
-Confirm Changes: Confirm the changes when prompted by Terraform. Once confirmed, Terraform will apply the plan and make the necessary changes to your infrastructure.
+1. Review Configuration: Review the main.tf file to ensure it matches your requirements. You can adjust variables such as region, accesskey, password etc.
+2. Initialize Terraform: Navigate to the directory containing the Terraform configuration files and initialize Terraform(terraform init).
+3. Create Plan: Generate a Terraform execution plan to preview the changes Terraform will make to your infrastructure(terraform plan).
+4. Apply Plan: If the plan looks good, apply it to provision or update your ECR resources(terraform apply).
+5. Confirm Changes: Confirm the changes when prompted by Terraform. Once confirmed, Terraform will apply the plan and make the necessary changes to your infrastructure.
